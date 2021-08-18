@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Papaparse Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js" integrity="sha512-EbdJQSugx0nVWrtyK3JdQQ/03mS3Q1UiAhRtErbwl1YL/+e2hZdlIcSURxxh7WXHTzn83sjlh2rysACoJGfb6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+<table style="width: 90vw; margin: auto;" class="table">
+    <thead>
+    <tr id="tableHeader">
+    </tr>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+</table>
+<script>
+    function createDataElement(htmlTag, innerText, idParent) {
+        let node = document.createElement(htmlTag);
+        let textnode = document.createTextNode(innerText);
+        node.appendChild(textnode);
+        document.getElementById(idParent).appendChild(node);
+    }
+
+    function createHeaderElement(columnText) {
+        createDataElement("th", columnText, "tableHeader");
+    }
+
+    function createCellData(rowIndex, dataIndex, cellText) {
+        if(dataIndex === 0) {
+            let node = document.createElement("tr");
+            node.setAttribute("id", "row" + rowIndex);
+            document.getElementById("tableBody").appendChild(node);
+
+            createDataElement("td", cellText, "row" + rowIndex);
+        } else {
+            createDataElement("td", cellText, "row" + rowIndex);
+        }
+    }
+
+    var csvString = "Restaurant, Cheese, Mushrooms, Size by Inch, Extra Spicy, Price (€)\nA, yes, yes, 12, no, 6\nB, no, yes, 15, yes, 8\nC, no, no, 9, no, 5\nD, yes, no, 12, yes, 7\nE, yes, no, 12, yes, 7.5\nF, no, yes, 15, yes, 9";
+    Papa.parse(csvString, {
+        complete: function(results) {
+            for(let i = 0; i < results.data.length; i++) {
+                if(i === 0) {
+                    for(let j = 0; j < results.data[i].length; j++) {
+                        createHeaderElement(results.data[i][j]);
+                    }
+                }
+                if(i > 0) {
+                    for(let j = 0; j < results.data[i].length; j++) {
+                        createCellData(i, j, results.data[i][j]);
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
