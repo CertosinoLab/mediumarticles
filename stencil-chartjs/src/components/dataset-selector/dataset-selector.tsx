@@ -1,4 +1,4 @@
-import {Component, Host, h, Event, EventEmitter, Element} from '@stencil/core';
+import {Component, h, Event, EventEmitter, Element} from '@stencil/core';
 
 @Component({
   tag: 'dataset-selector',
@@ -9,8 +9,6 @@ export class DatasetSelector {
   @Event() private changedDataset: EventEmitter<any>;
   @Element() private element: HTMLElement;
 
-  mySelectRef: any;
-
    options = [
       { value: 'chocolate', label: 'Chocolate' },
       { value: 'strawberry', label: 'Strawberry' },
@@ -19,7 +17,6 @@ export class DatasetSelector {
 
   componentDidLoad() {
     setTimeout(() => {
-      console.log("££££££££££££££££££££££££££££££");
       this.changedDataset.emit(this.config)
     }, 100);
   }
@@ -47,14 +44,7 @@ export class DatasetSelector {
     options: {}
   };
 
-  selectDataset() {
-    console.log("Dataset selected");
-  }
-
   private changedDatasetEvent = (event: any) => {
-    //console.log("pppppppppp evento grafico ", event.path[0].selectedIndex);
-    //this.mySelectRef = this.element.shadowRoot.querySelectorAll('select.mySelect');
-    //console.log("55555555555555555555555555555 ", this.mySelectRef[0].options[1].value);
     if(event.path[0].selectedIndex === 0) {
       this.data.datasets[0].data = [0, 10, 5, 2, 20, 30, 45];
       this.data.datasets[0].label = "My First Dataset";
@@ -80,5 +70,4 @@ export class DatasetSelector {
       </div>
     );
   }
-
 }

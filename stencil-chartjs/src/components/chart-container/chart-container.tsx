@@ -23,39 +23,14 @@ export class ChartContainer {
 
   @Listen('changedDataset', { target: 'window' })
   changedDatasetEventHandler(event: any) {
-    //const myChartRef: any = this.element.shadowRoot.querySelectorAll('canvas.myChart');
-    //myChartRef[0].destoy();
-    console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ", this.myChartRef);
     if(this.myChart !== undefined) {
       this.myChart.destroy();
     }
-
-    console.log(event);
 
     this.myChart = new Chart(
       this.myChartRef,
       event.detail
     );
-  }
-
-  /*
-  componentDidLoad() {
-    const myChartRef: any = this.element.shadowRoot.querySelectorAll('canvas.myChart');
-
-    let myChart = new Chart(
-      myChartRef,
-      this.config
-    );
-  }
-  */
-
-
-  private myCustomEvent = (event: any) => {
-    console.log("sono qui: ", event);
-    this.todoCompleted.emit({
-      "pippo": 50,
-      "topolino": 100
-    }); // now correct this
   }
 
   render() {
@@ -65,5 +40,4 @@ export class ChartContainer {
       </div>
     );
   }
-
 }
