@@ -24,7 +24,7 @@ export class MyComponent {
 
   @Listen('todoCompleted', { target: 'window' })
   myCustomEventHandler(event: any) {
-    console.log('--------------------------------- ', event);
+    console.log('--------------------------------- ', event.detail);
   }
 
   private getText(): string {

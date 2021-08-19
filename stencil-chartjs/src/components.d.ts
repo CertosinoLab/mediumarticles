@@ -8,6 +8,8 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ChartContainer {
     }
+    interface DatasetSelector {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -30,6 +32,12 @@ declare global {
         prototype: HTMLChartContainerElement;
         new (): HTMLChartContainerElement;
     };
+    interface HTMLDatasetSelectorElement extends Components.DatasetSelector, HTMLStencilElement {
+    }
+    var HTMLDatasetSelectorElement: {
+        prototype: HTMLDatasetSelectorElement;
+        new (): HTMLDatasetSelectorElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -38,12 +46,15 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "chart-container": HTMLChartContainerElement;
+        "dataset-selector": HTMLDatasetSelectorElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
     interface ChartContainer {
         "onTodoCompleted"?: (event: CustomEvent<any>) => void;
+    }
+    interface DatasetSelector {
     }
     interface MyComponent {
         /**
@@ -61,6 +72,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "chart-container": ChartContainer;
+        "dataset-selector": DatasetSelector;
         "my-component": MyComponent;
     }
 }
@@ -69,6 +81,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "chart-container": LocalJSX.ChartContainer & JSXBase.HTMLAttributes<HTMLChartContainerElement>;
+            "dataset-selector": LocalJSX.DatasetSelector & JSXBase.HTMLAttributes<HTMLDatasetSelectorElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

@@ -22,7 +22,8 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^2.0.1"
+    "@stencil/core": "^2.0.1",
+    "chart.js": "^3.5.1"
   },
   "devDependencies": {
     "@types/jest": "^26.0.24",
