@@ -55,6 +55,7 @@ declare namespace LocalJSX {
         "onTodoCompleted"?: (event: CustomEvent<any>) => void;
     }
     interface DatasetSelector {
+        "onChangedDataset"?: (event: CustomEvent<any>) => void;
     }
     interface MyComponent {
         /**

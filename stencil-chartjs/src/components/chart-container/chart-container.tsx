@@ -1,5 +1,5 @@
 import { Chart, registerables } from 'chart.js';
-import {Component, EventEmitter, Event, Element, h} from '@stencil/core';
+import {Component, EventEmitter, Event, Element, h, Listen} from '@stencil/core';
 
 @Component({
   tag: 'chart-container',
@@ -10,33 +10,35 @@ export class ChartContainer {
   @Event() private todoCompleted: EventEmitter<any>;
   @Element() private element: HTMLElement;
 
+  myChartRef: any;
+  myChart: any;
+
   constructor() {
     Chart.register(...registerables);
   }
 
-  labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-  ];
-  data = {
-    labels: this.labels,
-    datasets: [{
-      label: 'My First dataset',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
-      data: [0, 10, 5, 2, 20, 30, 45],
-    }]
-  };
-  config: any = {
-    type: 'line',
-    data: this.data,
-    options: {}
-  };
+  componentDidLoad() {
+    this.myChartRef = this.element.shadowRoot.querySelectorAll('canvas.myChart');
+  }
 
+  @Listen('changedDataset', { target: 'window' })
+  changedDatasetEventHandler(event: any) {
+    //const myChartRef: any = this.element.shadowRoot.querySelectorAll('canvas.myChart');
+    //myChartRef[0].destoy();
+    console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ", this.myChartRef);
+    if(this.myChart !== undefined) {
+      this.myChart.destroy();
+    }
+
+    console.log(event);
+
+    this.myChart = new Chart(
+      this.myChartRef,
+      event.detail
+    );
+  }
+
+  /*
   componentDidLoad() {
     const myChartRef: any = this.element.shadowRoot.querySelectorAll('canvas.myChart');
 
@@ -45,6 +47,8 @@ export class ChartContainer {
       this.config
     );
   }
+  */
+
 
   private myCustomEvent = (event: any) => {
     console.log("sono qui: ", event);
