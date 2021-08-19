@@ -61,7 +61,6 @@ export class ChartContainer {
   render() {
     return (
       <div class="chartContainer">
-        <p onClick={this.myCustomEvent} style={{color: 'red'}}>Sono Chart Container ciao!</p>
         <canvas class="myChart"></canvas>
       </div>
     );
