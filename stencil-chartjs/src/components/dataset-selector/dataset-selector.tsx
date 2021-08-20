@@ -9,12 +9,6 @@ export class DatasetSelector {
   @Event() private changedDataset: EventEmitter<any>;
   @Element() private element: HTMLElement;
 
-   options = [
-      { value: 'chocolate', label: 'Chocolate' },
-      { value: 'strawberry', label: 'Strawberry' },
-      { value: 'vanilla', label: 'Vanilla' }
-   ]
-
   componentDidLoad() {
     setTimeout(() => {
       this.changedDataset.emit(this.config)
