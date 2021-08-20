@@ -7,7 +7,6 @@ import {Component, EventEmitter, Event, Element, h, Listen} from '@stencil/core'
   shadow: true,
 })
 export class ChartContainer {
-  @Event() private todoCompleted: EventEmitter<any>;
   @Element() private element: HTMLElement;
 
   myChartRef: any;
