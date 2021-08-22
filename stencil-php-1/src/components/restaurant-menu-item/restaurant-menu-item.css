@@ -1,0 +1,11 @@
+:host {
+  display: block;
+}
+
+.menu-item-text {
+  font-size: 20px;
+}
+
+.menu-item-image {
+  border-radius: 5px;
+}

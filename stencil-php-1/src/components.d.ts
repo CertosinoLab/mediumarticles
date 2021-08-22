@@ -6,76 +6,38 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface ChartContainer {
-    }
-    interface DatasetSelector {
-    }
-    interface DivInterno {
-        "mioTesto": string;
-    }
-    interface TestoColorato {
-        "mioTesto": string;
+    interface RestaurantMenuItem {
+        "imageUrl": string;
+        "name": string;
+        "price": number;
     }
 }
 declare global {
-    interface HTMLChartContainerElement extends Components.ChartContainer, HTMLStencilElement {
+    interface HTMLRestaurantMenuItemElement extends Components.RestaurantMenuItem, HTMLStencilElement {
     }
-    var HTMLChartContainerElement: {
-        prototype: HTMLChartContainerElement;
-        new (): HTMLChartContainerElement;
-    };
-    interface HTMLDatasetSelectorElement extends Components.DatasetSelector, HTMLStencilElement {
-    }
-    var HTMLDatasetSelectorElement: {
-        prototype: HTMLDatasetSelectorElement;
-        new (): HTMLDatasetSelectorElement;
-    };
-    interface HTMLDivInternoElement extends Components.DivInterno, HTMLStencilElement {
-    }
-    var HTMLDivInternoElement: {
-        prototype: HTMLDivInternoElement;
-        new (): HTMLDivInternoElement;
-    };
-    interface HTMLTestoColoratoElement extends Components.TestoColorato, HTMLStencilElement {
-    }
-    var HTMLTestoColoratoElement: {
-        prototype: HTMLTestoColoratoElement;
-        new (): HTMLTestoColoratoElement;
+    var HTMLRestaurantMenuItemElement: {
+        prototype: HTMLRestaurantMenuItemElement;
+        new (): HTMLRestaurantMenuItemElement;
     };
     interface HTMLElementTagNameMap {
-        "chart-container": HTMLChartContainerElement;
-        "dataset-selector": HTMLDatasetSelectorElement;
-        "div-interno": HTMLDivInternoElement;
-        "testo-colorato": HTMLTestoColoratoElement;
+        "restaurant-menu-item": HTMLRestaurantMenuItemElement;
     }
 }
 declare namespace LocalJSX {
-    interface ChartContainer {
-    }
-    interface DatasetSelector {
-        "onChangedDataset"?: (event: CustomEvent<any>) => void;
-    }
-    interface DivInterno {
-        "mioTesto"?: string;
-    }
-    interface TestoColorato {
-        "mioTesto"?: string;
+    interface RestaurantMenuItem {
+        "imageUrl"?: string;
+        "name"?: string;
+        "price"?: number;
     }
     interface IntrinsicElements {
-        "chart-container": ChartContainer;
-        "dataset-selector": DatasetSelector;
-        "div-interno": DivInterno;
-        "testo-colorato": TestoColorato;
+        "restaurant-menu-item": RestaurantMenuItem;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "chart-container": LocalJSX.ChartContainer & JSXBase.HTMLAttributes<HTMLChartContainerElement>;
-            "dataset-selector": LocalJSX.DatasetSelector & JSXBase.HTMLAttributes<HTMLDatasetSelectorElement>;
-            "div-interno": LocalJSX.DivInterno & JSXBase.HTMLAttributes<HTMLDivInternoElement>;
-            "testo-colorato": LocalJSX.TestoColorato & JSXBase.HTMLAttributes<HTMLTestoColoratoElement>;
+            "restaurant-menu-item": LocalJSX.RestaurantMenuItem & JSXBase.HTMLAttributes<HTMLRestaurantMenuItemElement>;
         }
     }
 }
