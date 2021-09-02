@@ -2,31 +2,10 @@
     import {sharedData} from "../store";
     import { onMount } from 'svelte';
     import * as d3 from 'd3';
-    //var data = [];
 
     let el;
-
     let data;
-/*
-    const unsubscribe = sharedData.subscribe(value => {
-        data = value;
-        console.log(data);
 
-        d3.select(el)
-            .selectAll("div")
-            .data(data)
-            .enter()
-            .append("div")
-            .style("width", function(d) {
-                return d + "px";
-            })
-            .text(function(d) {
-                return d;
-            });
-
-
-    });
-*/
     onMount(() => {
         data = $sharedData;
 
@@ -56,4 +35,3 @@
 </style>
 
 <div bind:this={el} class="chart"></div>
-<p>{$sharedData}</p>

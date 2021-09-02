@@ -6,9 +6,21 @@
     }
 
     function fetchData() {
-        sharedData.set([10, 566, 468, 80, 103, 265])
+        sharedData.set([Math.floor(Math.random() * 600),
+            Math.floor(Math.random() * 600),
+            Math.floor(Math.random() * 600),
+            Math.floor(Math.random() * 600),
+            Math.floor(Math.random() * 600),
+            Math.floor(Math.random() * 600)
+        ])
     }
 </script>
 
-<button on:click={() => getRandomInt(10)}>Sono Data Fetch Button</button>
-<button on:click={fetchData}>increment</button>
+<style>
+    .fetch-button {
+        float: left;
+        cursor: pointer;
+    }
+</style>
+
+<button class="fetch-button" on:click={fetchData}>Fetch Data</button>
