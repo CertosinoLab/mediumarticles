@@ -5,7 +5,7 @@
 
 	let chartData;
 
-	const subscription = sharedData.subscribe(value => {
+	sharedData.subscribe(value => {
 		console.log(value);
 		chartData = value;
 	});
