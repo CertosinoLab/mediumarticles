@@ -20,6 +20,7 @@
     .fetch-button {
         float: left;
         cursor: pointer;
+        margin-top: 10px;
     }
 </style>
 
