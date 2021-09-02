@@ -1,14 +1,20 @@
 <script>
     import {sharedData} from "../store";
 
+    function generateRandomNumber() {
+        return Math.floor(Math.random() * 600)
+    }
+
+    function setNewData() {
+        let newData = [];
+        for(let i = 0; i < 6; i++) {
+            newData.push(generateRandomNumber());
+        }
+        return newData;
+    }
+
     function fetchData() {
-        sharedData.set([Math.floor(Math.random() * 600),
-            Math.floor(Math.random() * 600),
-            Math.floor(Math.random() * 600),
-            Math.floor(Math.random() * 600),
-            Math.floor(Math.random() * 600),
-            Math.floor(Math.random() * 600)
-        ])
+        sharedData.set(setNewData())
     }
 </script>
 
