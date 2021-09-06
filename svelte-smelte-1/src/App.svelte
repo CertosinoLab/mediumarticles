@@ -1,10 +1,17 @@
 <script>
+	import "smelte/src/tailwind.css";
+	import Button from "smelte/src/components/Button";
 	export let name;
+
+	function changeName() {
+		name = "New Name";
+	}
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<Button style="margin-top: 20px;" on:click={changeName}>Change Name</Button>
 </main>
 
 <style>
