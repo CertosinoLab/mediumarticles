@@ -1,7 +1,7 @@
 <template>
-    <div style="border: 1px solid red;">
-        <p>Sono Second Component</p>
-        <button v-on:click="emitter.emit('say-hello', 'Hey, Stranger!')">Emetto evento</button>
+    <div style="border: 1px solid black;">
+        <p>Second Component</p>
+        <button v-on:click="emitMyEvent">Emit Event</button>
     </div>
 </template>
 
@@ -9,7 +9,7 @@
     export default {
         methods: {
           emitMyEvent() {
-              console.log("emetto evento");
+              this.emitter.emit('my-event', {'eventContent': 'String changed'})
           }
         }
     }
