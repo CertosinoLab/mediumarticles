@@ -15,7 +15,7 @@ export default {
 
 <template>
   <div style="border: 1px solid black;">
-    <p>First Component</p>
+    <h1>First Component</h1>
     <p>{{testEvent}}</p>
   </div>
 </template>

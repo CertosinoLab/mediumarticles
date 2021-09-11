@@ -1,6 +1,6 @@
 <template>
     <div style="border: 1px solid black;">
-        <p>Second Component</p>
+        <h1>Second Component</h1>
         <button v-on:click="emitMyEvent">Emit Event</button>
     </div>
 </template>
