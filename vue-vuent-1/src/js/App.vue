@@ -1,8 +1,8 @@
 <template>
   <div id="app" style="display: flex; justify-content: center;">
     <div style="max-width: 500px;">
-      <vnt-checkbox v-model="isChecked"></vnt-checkbox>
-      <vnt-button>Button</vnt-button>
+      <vnt-checkbox style="margin-left: 40%; margin-bottom: 20px;" v-model="isChecked"></vnt-checkbox>
+      <vnt-button style="margin-bottom: 20px;">Button</vnt-button>
       <vnt-pivot>
         <vnt-pivot-item label="Item 1" active>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
