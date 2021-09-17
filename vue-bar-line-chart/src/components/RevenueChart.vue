@@ -1,23 +1,23 @@
 <template>
     <div style="width: 800px; height: 600px;">
-        <canvas id="planet-chart"></canvas>
+        <canvas id="revenue-chart"></canvas>
     </div>
 </template>
 
 <script>
     import Chart from 'chart.js'
-    import planetChartData from './revenue-data.js'
+    import revenueChartData from './revenue-data.js'
 
     export default {
-        name: 'PlanetChart',
+        name: 'RevenueChart',
         data() {
             return {
-                planetChartData: planetChartData
+                revenueChartData: revenueChartData
             }
         },
         mounted() {
-            const ctx = document.getElementById('planet-chart');
-            new Chart(ctx, this.planetChartData);
+            const ctx = document.getElementById('revenue-chart');
+            new Chart(ctx, this.revenueChartData);
         }
     }
 </script>

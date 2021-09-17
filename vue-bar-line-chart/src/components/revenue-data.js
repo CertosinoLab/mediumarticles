@@ -9,7 +9,7 @@ for(let i = 0; i < movingAvg.length; i++) {
     if(movingAvg[i]) movingAvg[i] = movingAvg[i].toFixed(2);
 }
 
-export const planetChartData = {
+export const revenueChartData = {
     type: "bar",
     data: {
         labels: ["Jan 2000", "Feb 2000", "Mar 2000", "Apr 2000",
@@ -62,4 +62,4 @@ export const planetChartData = {
     }
 };
 
-export default planetChartData;
+export default revenueChartData;
