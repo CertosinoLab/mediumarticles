@@ -18,7 +18,7 @@ export const planetChartData = {
             "Mar 2001", "Apr 2001", "May 2001", "Jun 2001",],
         datasets: [
             {
-                label: "moving Average (3)",
+                label: "Moving Average (3)",
                 type: "line",
                 data: movingAvg,
                 backgroundColor: "rgba(61,196,122,.5)",
