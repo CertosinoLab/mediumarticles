@@ -1,20 +1,15 @@
 <template>
   <div id="app">
-    <!--<img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-    <PlanetChart />
+    <RevenueChart />
   </div>
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
-
-import PlanetChart from "./components/PlanetChart";
+import RevenueChart from "./components/RevenueChart";
 export default {
   name: 'App',
   components: {
-    PlanetChart
-    //HelloWorld
+    RevenueChart
   }
 }
 </script>

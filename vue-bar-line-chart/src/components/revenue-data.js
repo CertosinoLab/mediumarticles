@@ -1,24 +1,36 @@
+import {
+    ma
+} from 'moving-averages'
+
+let revenueData = [60, 55, 65, 70, 65, 75, 80, 90, 110, 120, 90, 100,
+                    80, 70, 100, 130, 80, 65];
+let movingAvg = ma(revenueData, 3);
+for(let i = 0; i < movingAvg.length; i++) {
+    if(movingAvg[i]) movingAvg[i] = movingAvg[i].toFixed(2);
+}
+
 export const planetChartData = {
     type: "bar",
     data: {
         labels: ["Jan 2000", "Feb 2000", "Mar 2000", "Apr 2000",
             "May 2000", "Jun 2000", "Jul 2000", "Aug 2000", "Sep 2000",
-            "Oct 2000", "Nov 2000", "Dec 2000"],
+            "Oct 2000", "Nov 2000", "Dec 2000", "Jan 2001", "Feb 2001",
+            "Mar 2001", "Apr 2001", "May 2001", "Jun 2001",],
         datasets: [
             {
-                label: "moving Average (4)",
+                label: "moving Average (3)",
                 type: "line",
-                data: [NaN, NaN, NaN, 20, 70, 80, 20, 20, 80, 10, 30, 40],
-                backgroundColor: "rgba(54,73,93,.5)",
-                borderColor: "#36495d",
+                data: movingAvg,
+                backgroundColor: "rgba(61,196,122,.5)",
+                borderColor: "#3DC47A",
                 borderWidth: 3
             },
             {
                 label: "Total Revenue (k)",
                 type: "bar",
-                data: [60, 55, 65, 70, 65, 75, 80, 90, 110, 120, 90, 100],
-                backgroundColor: "rgba(71, 183,132,.5)",
-                borderColor: "#47b784",
+                data: revenueData,
+                backgroundColor: "rgba(61, 157,196,.5)",
+                borderColor: "#3D9DC4",
                 borderWidth: 3
             }
         ]

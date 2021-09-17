@@ -6,7 +6,7 @@
 
 <script>
     import Chart from 'chart.js'
-    import planetChartData from './planet-data.js'
+    import planetChartData from './revenue-data.js'
 
     export default {
         name: 'PlanetChart',
