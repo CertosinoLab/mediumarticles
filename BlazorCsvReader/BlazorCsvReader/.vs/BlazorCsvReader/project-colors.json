@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e2b485bc-a300-4150-9f4d-40654aac17a8": {
+      "ProjectGuid": "e2b485bc-a300-4150-9f4d-40654aac17a8",
+      "DisplayName": "BlazorCsvReader",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

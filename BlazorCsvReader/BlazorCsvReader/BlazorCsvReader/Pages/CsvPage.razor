@@ -1,0 +1,45 @@
+﻿@page "/csvpage"
+@using BlazorCsvReader.Models;
+@using System.Globalization
+@inject HttpClient Http
+
+<h3>csvreader</h3>
+
+<ul>
+    @foreach (var item in listOfPizzasBlazor)
+    {
+      <li>
+        Id - @item.Id,
+        Name - @item.Name,
+        Price - @item.Price,
+        Stock - @item.Stock
+      </li>
+    }
+</ul>
+
+@code {
+    List<Pizza> listOfPizzasBlazor = new List<Pizza>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        string csvPizza = await Http.GetStringAsync("sample-data/pizzas.csv");
+        List<string> pizzaRows = csvPizza.Split("\n").ToList();
+
+        for (int i = 0; i < pizzaRows.Count; i++)
+        {
+            if (i > 0)
+            {
+                 List<string> pizzaStringList = pizzaRows[i].Split(";").ToList();
+                 
+                 Pizza pizza = new Pizza(
+                     Int32.Parse(pizzaStringList[0]),
+                     pizzaStringList[1],
+                     float.Parse(pizzaStringList[2], CultureInfo.InvariantCulture),
+                     Int32.Parse(pizzaStringList[3])
+                 );
+
+                 listOfPizzasBlazor.Add(pizza);
+            }
+        }
+    }
+}
