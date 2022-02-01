@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "EXtmF+y4de2FQ8qdgv8t69LlEBQA9YV3Yv+Pv7VArONixKzUh87OeusxuJw2htJ5hTiKG7N4TqUbN68jEFFxAQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\simon\\OneDrive\\Desktop\\Concorrenza in c#\\CsvParallel\\CsvParallel\\CsvParallel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\simon\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512",
+    "C:\\Users\\simon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

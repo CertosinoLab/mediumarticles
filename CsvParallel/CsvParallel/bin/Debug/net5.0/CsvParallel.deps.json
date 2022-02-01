@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "CsvParallel/1.0.0": {
+        "dependencies": {
+          "CsvHelper": "27.2.1"
+        },
+        "runtime": {
+          "CsvParallel.dll": {}
+        }
+      },
+      "CsvHelper/27.2.1": {
+        "runtime": {
+          "lib/net5.0/CsvHelper.dll": {
+            "assemblyVersion": "27.0.0.0",
+            "fileVersion": "27.2.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CsvParallel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CsvHelper/27.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uS5ix5hL9gL5taiAG//CScyJa8Fn1ZOh3FDhDvf4laboESFs84mCNropfp7PIt8xCkyQofljFpqu1B5UnSXjyA==",
+      "path": "csvhelper/27.2.1",
+      "hashPath": "csvhelper.27.2.1.nupkg.sha512"
+    }
+  }
+}

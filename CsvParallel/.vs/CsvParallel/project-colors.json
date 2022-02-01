@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "95c13dae-4625-426a-9403-8f12948ca3ee": {
+      "ProjectGuid": "95c13dae-4625-426a-9403-8f12948ca3ee",
+      "DisplayName": "CsvParallel",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
