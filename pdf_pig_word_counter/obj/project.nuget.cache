@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "do91VyovzdDM8dwXs5wjgwUeNuFdBzdnj+5xQ0mtbessIJQpun7ED25vBrovb06GZlhcOZrvaXuimykmTJ+Tug==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\simon\\OneDrive\\Desktop\\Articoli Medium\\pdf_pig_word_counter\\pdf_pig_word_counter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\simon\\.nuget\\packages\\pdfpig\\0.1.5\\pdfpig.0.1.5.nupkg.sha512",
+    "C:\\Users\\simon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

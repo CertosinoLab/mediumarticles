@@ -1,0 +1,65 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "pdf_pig_word_counter/1.0.0": {
+        "dependencies": {
+          "PdfPig": "0.1.5"
+        },
+        "runtime": {
+          "pdf_pig_word_counter.dll": {}
+        }
+      },
+      "PdfPig/0.1.5": {
+        "runtime": {
+          "lib/netstandard2.0/UglyToad.PdfPig.Core.dll": {
+            "assemblyVersion": "0.1.5.0",
+            "fileVersion": "0.1.5.0"
+          },
+          "lib/netstandard2.0/UglyToad.PdfPig.DocumentLayoutAnalysis.dll": {
+            "assemblyVersion": "0.1.5.0",
+            "fileVersion": "0.1.5.0"
+          },
+          "lib/netstandard2.0/UglyToad.PdfPig.Fonts.dll": {
+            "assemblyVersion": "0.1.5.0",
+            "fileVersion": "0.1.5.0"
+          },
+          "lib/netstandard2.0/UglyToad.PdfPig.Package.dll": {
+            "assemblyVersion": "0.1.5.0",
+            "fileVersion": "0.1.5.0"
+          },
+          "lib/netstandard2.0/UglyToad.PdfPig.Tokenization.dll": {
+            "assemblyVersion": "0.1.5.0",
+            "fileVersion": "0.1.5.0"
+          },
+          "lib/netstandard2.0/UglyToad.PdfPig.Tokens.dll": {
+            "assemblyVersion": "0.1.5.0",
+            "fileVersion": "0.1.5.0"
+          },
+          "lib/netstandard2.0/UglyToad.PdfPig.dll": {
+            "assemblyVersion": "0.1.5.0",
+            "fileVersion": "0.1.5.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "pdf_pig_word_counter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PdfPig/0.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VJfr6nMmTVvEWDkcI/3LW1DLbZwYTZDMEXwNJH3ZXdT0uhBYEcFwEYJTd97Z4qGZbxaA1yCmudl+vY9y2NC/mA==",
+      "path": "pdfpig/0.1.5",
+      "hashPath": "pdfpig.0.1.5.nupkg.sha512"
+    }
+  }
+}
